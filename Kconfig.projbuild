@@ -1,0 +1,32 @@
+menu "MQTT config"
+
+	config MQTT_HOST
+	    string "MQTT Host"
+		default "iot.eclipse.org"
+	
+	config MQTT_PORT
+	    int "MQTT Port"
+	    default 1883
+	
+	config MQTT_CLIENT_ID
+	    string "MQTT Client ID"
+	    default "ESP32"
+	
+	config MQTT_USERNAME
+	    string "MQTT Username"
+	
+	config MQTT_PASSWORD
+	    string "MQTT Password"
+	
+	config MQTT_VERSION
+	    int "MQTT Version"
+	    default 3
+	    range 3 4
+	    help
+	        For version 3.1 use 3 and for version 3.1.1 use 4
+	
+	config MQTT_USE_TASK
+	    int "MQTT FreeRTOS Task"
+	    default 0
+
+endmenu
